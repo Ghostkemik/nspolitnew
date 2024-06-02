@@ -1420,13 +1420,13 @@ local function FSZXCVA_fake_script() -- loby.LocalScript
 	local scriptt = Instance.new('LocalScript')
 	scriptt.Parent = loby
 
-	script.Parent.MouseButton1Click:Connect(function()
+	loby.MouseButton1Click:Connect(function()
 		local oyuncu = game.Players.LocalPlayer
 		local karakter = oyuncu.Character or oyuncu.CharacterAdded:Wait()
 		local gohus = karakter:WaitForChild("HumanoidRootPart")
 		gohus.CFrame = game.Workspace.Spawn.CFrame
-		script.Parent.Parent.Parent.Parent.Parent.Parent.Containerr.Visible = false
-		script.Parent.Parent.Parent.Parent.Parent.Parent.open.Visible = true
+		loby.Parent.Parent.Parent.Parent.Parent.Containerr.Visible = false
+		loby.Parent.Parent.Parent.Parent.Parent.open.Visible = true
 	end)
 
 	
@@ -1434,15 +1434,15 @@ end
 coroutine.wrap(FSZXCVA_fake_script)()
 local function KBQEMYC_fake_script() -- obby1.LocalScript 
 	local scriptt = Instance.new('LocalScript')
-	scriptt.Parent = obby1
+	scriptt.Parent = obby1	
 
-	script.Parent.MouseButton1Click:Connect(function()
+	obby1.MouseButton1Click:Connect(function()
 		local oyuncu = game.Players.LocalPlayer
 		local karakter = oyuncu.Character or oyuncu.CharacterAdded:Wait()
 		local gohus = karakter:WaitForChild("HumanoidRootPart")
 		gohus.CFrame = game.Workspace.RewardParts.Obby1.TouchPart.CFrame
-		script.Parent.Parent.Parent.Parent.Parent.Parent.Containerr.Visible = false
-		script.Parent.Parent.Parent.Parent.Parent.Parent.open.Visible = true
+		obby1.Parent.Parent.Parent.Parent.Parent.Containerr.Visible = false
+		obby1.Parent.Parent.Parent.Parent.Parent.open.Visible = true
 	end)
 
 	
@@ -1458,13 +1458,13 @@ coroutine.wrap(ZLTK_fake_script)()
 local function VTRZIER_fake_script() -- obby2.LocalScript 
 	local scriptt = Instance.new('LocalScript', obby2)
 
-	script.Parent.MouseButton1Click:Connect(function()
+	obby2.MouseButton1Click:Connect(function()
 		local oyuncu = game.Players.LocalPlayer
 		local karakter = oyuncu.Character or oyuncu.CharacterAdded:Wait()
 		local gohus = karakter:WaitForChild("HumanoidRootPart")
 		gohus.CFrame = game.Workspace.RewardParts.Obby2.TouchPart.CFrame
-		script.Parent.Parent.Parent.Parent.Parent.Parent.Containerr.Visible = false
-		script.Parent.Parent.Parent.Parent.Parent.Parent.open.Visible = true
+		obby2.Parent.Parent.Parent.Parent.Parent.Containerr.Visible = false
+		obby2.Parent.Parent.Parent.Parent.Parent.open.Visible = true
 	end)
 
 	
@@ -1473,9 +1473,9 @@ coroutine.wrap(VTRZIER_fake_script)()
 local function QUPTZEC_fake_script() -- Close.LocalScript 
 	local scriptt = Instance.new('LocalScript', Close)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.open.Visible = true
-		script.Parent.Parent.Parent.Containerr.Visible = false
+	Close.MouseButton1Click:Connect(function()
+		Close.Parent.Parent.open.Visible = true
+		Close.Parent.Parent.Containerr.Visible = false
 	end)
 
 end
@@ -1483,9 +1483,9 @@ coroutine.wrap(QUPTZEC_fake_script)()
 local function TXDLN_fake_script() -- open.LocalScript 
 	local scriptt = Instance.new('LocalScript', open)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Containerr.Visible = true
-		script.Parent.Visible = false
+	open.MouseButton1Click:Connect(function()
+		open.Parent.Containerr.Visible = true
+		open.Visible = false
 	end)
 
 end
