@@ -1417,7 +1417,8 @@ ImageLabel_3.Image = "rbxassetid://17710738145"
 
 -- Scripts:
 local function FSZXCVA_fake_script() -- loby.LocalScript 
-	local scriptt = Instance.new('LocalScript', loby)
+	local scriptt = Instance.new('LocalScript')
+	scriptt.Parent = loby
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local oyuncu = game.Players.LocalPlayer
@@ -1432,7 +1433,8 @@ local function FSZXCVA_fake_script() -- loby.LocalScript
 end
 coroutine.wrap(FSZXCVA_fake_script)()
 local function KBQEMYC_fake_script() -- obby1.LocalScript 
-	local scriptt = Instance.new('LocalScript', obby1)
+	local scriptt = Instance.new('LocalScript')
+	scriptt.Parent = obby1
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local oyuncu = game.Players.LocalPlayer
