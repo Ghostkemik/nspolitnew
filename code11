@@ -191,7 +191,7 @@ local ImageLabel_3 = Instance.new("ImageLabel")
 
 NSPOLOIT.Name = "NSPOLOIT"
 NSPOLOIT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-NSPOLOIT.Enabled = false
+NSPOLOIT.Enabled = true
 NSPOLOIT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Canvas.Name = "Canvas"
@@ -1416,10 +1416,25 @@ ImageLabel_3.Size = UDim2.new(0, 45, 0, 48)
 ImageLabel_3.Image = "rbxassetid://17710738145"
 
 -- Scripts:
+local function FSZXCVA_fake_script() -- loby.LocalScript 
+	local scriptt = Instance.new('LocalScript', loby)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local oyuncu = game.Players.LocalPlayer
+		local karakter = oyuncu.Character or oyuncu.CharacterAdded:Wait()
+		local gohus = karakter:WaitForChild("HumanoidRootPart")
+		gohus.CFrame = game.Workspace.Spawn.CFrame
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Containerr.Visible = false
+		script.Parent.Parent.Parent.Parent.Parent.Parent.open.Visible = true
+	end)
+
+	
+end
+coroutine.wrap(FSZXCVA_fake_script)()
 local function KBQEMYC_fake_script() -- obby1.LocalScript 
 	local scriptt = Instance.new('LocalScript', obby1)
 
-	obby1.MouseButton1Click:Connect(function()
+	script.Parent.MouseButton1Click:Connect(function()
 		local oyuncu = game.Players.LocalPlayer
 		local karakter = oyuncu.Character or oyuncu.CharacterAdded:Wait()
 		local gohus = karakter:WaitForChild("HumanoidRootPart")
