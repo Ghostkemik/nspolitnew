@@ -1419,7 +1419,7 @@ ImageLabel_3.Image = "rbxassetid://17710738145"
 local function KBQEMYC_fake_script() -- obby1.LocalScript 
 	local scriptt = Instance.new('LocalScript', obby1)
 
-	script.Parent.MouseButton1Click:Connect(function()
+	obby1.MouseButton1Click:Connect(function()
 		local oyuncu = game.Players.LocalPlayer
 		local karakter = oyuncu.Character or oyuncu.CharacterAdded:Wait()
 		local gohus = karakter:WaitForChild("HumanoidRootPart")
