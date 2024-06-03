@@ -16,7 +16,10 @@ local function teleportToNextTitan()
 	local currentTitan = titans[currentIndex]
 	if currentTitan:FindFirstChild("Head") then
 		humanoidRootPart.CFrame = currentTitan.Head.CFrame
-		game.ReplicatedStorage.DamageEvent:FireServer(currentTitan.Humanoid)
+		local character = game.Players.LocalPlayer.Character
+		local humanoid = character:WaitForChild("Humanoid") 
+		humanoid.PlatformStand = true
+		character:SetAttribute("Anchored", true)
 	else
 		print("Titan'ın Head kısmı bulunamadı: " .. currentTitan.Name)
 	end
@@ -36,6 +39,10 @@ local function updateTitanTargets()
 				end
 			else
 				print("Titan'ın sağlığı 0: " .. titan.Name)
+				local character = game.Players.LocalPlayer.Character
+				local humanoid = character:WaitForChild("Humanoid") 
+				humanoid.PlatformStand = false
+				character:SetAttribute("Anchored", false)
 			end
 		end
 		wait(1) 
