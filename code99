@@ -1,8 +1,7 @@
-
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-local titansFolder = game.Workspace:WaitForChild("Titans")
+local titansFolder = game.Workspace:WaitForChild("Entities").Titans
 local currentIndex = 1
 
 local function teleportToNextTitan()
