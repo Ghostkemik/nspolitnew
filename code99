@@ -1,3 +1,4 @@
+
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -15,7 +16,7 @@ local function teleportToNextTitan()
 	local currentTitan = titans[currentIndex]
 	if currentTitan:FindFirstChild("Head") then
 		humanoidRootPart.CFrame = currentTitan.Head.CFrame
-		game.ReplicatedStorage.DamageEvent:FireServer(currentTitan)
+		game.ReplicatedStorage.DamageEvent:FireServer(currentTitan.Humanoid)
 	else
 		print("Titan'ın Head kısmı bulunamadı: " .. currentTitan.Name)
 	end
