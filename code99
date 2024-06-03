@@ -1,44 +1,54 @@
+
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-local titansFolder = game.Workspace:WaitForChild("Entities").Titans
+local titansFolder = game.Workspace:WaitForChild("Titans")
 local currentIndex = 1
 
 local function teleportToNextTitan()
-    local titans = titansFolder:GetChildren()
-    if currentIndex > #titans then
-        print("Tüm Titan'lara teleport olundu.")
-        currentIndex = 1 
-        return
-    end
+	local titans = titansFolder:GetChildren()
+	if currentIndex > #titans then
+		print("Tüm Titan'lara teleport olundu.")
+		currentIndex = 1 
+		return
+	end
 
-    local currentTitan = titans[currentIndex]
-    if currentTitan:FindFirstChild("Head") then
-        humanoidRootPart.CFrame = currentTitan.Head.CFrame
-        print("Teleport oldu: " .. currentTitan.Name)
-    else
-        print("Titan'ın Head kısmı bulunamadı: " .. currentTitan.Name)
-    end
+	local currentTitan = titans[currentIndex]
+	if currentTitan:FindFirstChild("Head") then
+		local character = game.Players.LocalPlayer.Character 
+		local humanoid = character:WaitForChild("Humanoid") 
+		humanoid.PlatformStand = true
+		character:SetAttribute("Anchored", true)
+		
+		humanoidRootPart.CFrame = currentTitan.Head.CFrame
+		print("Teleport oldu: " .. currentTitan.Name)
+	else
+		print("Titan'ın Head kısmı bulunamadı: " .. currentTitan.Name)
+	end
 
-    currentIndex = currentIndex + 1
+	currentIndex = currentIndex + 1
 end
 
 local function updateTitanTargets()
-    while true do
-        local titans = titansFolder:GetChildren()
-        for _, titan in ipairs(titans) do
-            local humanoid = titan:FindFirstChild("Humanoid")
-            if humanoid and humanoid.Health > 0 then
-                if titan:FindFirstChild("Target") then
-                    titan.Target.Value = " "
-                    print("Target güncellendi: " .. titan.Name)
-                end
-            else
-                print("Titan'ın sağlığı 0: " .. titan.Name)
-            end
-        end
-        wait(1) 
-    end
+	while true do
+		local titans = titansFolder:GetChildren()
+		for _, titan in ipairs(titans) do
+			local humanoid = titan:FindFirstChild("Humanoid")
+			if humanoid and humanoid.Health > 0 then
+				if titan:FindFirstChild("Target") then
+					titan.Target.Value = " "
+					print("Target güncellendi: " .. titan.Name)
+					local character = game.Players.LocalPlayer.Character 
+					local humanoid = character:WaitForChild("Humanoid") 
+					humanoid.PlatformStand = false
+					character:SetAttribute("Anchored", false)
+				end
+			else
+				print("Titan'ın sağlığı 0: " .. titan.Name)
+			end
+		end
+		wait(1) 
+	end
 end
 teleportToNextTitan()
 spawn(updateTitanTargets)
