@@ -1617,6 +1617,22 @@ local function ZXQTH_fake_script() -- TextButton_2.LocalScript
 			locked = false
 		end
 	end)
+	local userInputService = game:GetService("UserInputService")
+	userInputService.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.LeftAlt then
+			if not db then
+				db = true
+				toggleButtonStateOpen()
+
+			else
+				db = false
+				toggleButtonStateClose()
+				target = nil
+				locked = false
+			end
+		end
+	end)
+	
 end
 coroutine.wrap(ZXQTH_fake_script)()
 local function ADVO_fake_script() -- TextButton_3.LocalScript 
