@@ -1,1754 +1,774 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local Sidebar = Instance.new("ScreenGui")
-local Canvas = Instance.new("Frame")
-local Container = Instance.new("Frame")
-local MainContainer = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Main = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local Profile = Instance.new("Frame")
-local Main_2 = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local Avatar = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local UIGradient = Instance.new("UIGradient")
-local Glow = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local Glow_2 = Instance.new("ImageLabel")
-local UIGradient_2 = Instance.new("UIGradient")
-local TextLabel_3 = Instance.new("TextLabel")
-local Navigation = Instance.new("Frame")
-local UIListLayout = Instance.new("UIListLayout")
-local PlayerESP = Instance.new("Frame")
-local Activee = Instance.new("Frame")
-local Main_3 = Instance.new("Frame")
-local UICorner_5 = Instance.new("UICorner")
-local UIGradient_3 = Instance.new("UIGradient")
-local TextLabel_4 = Instance.new("TextLabel")
-local Keybind = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local TextLabel_5 = Instance.new("TextLabel")
-local Icon = Instance.new("ImageLabel")
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-local UIGradient_4 = Instance.new("UIGradient")
-local UICorner_7 = Instance.new("UICorner")
-local Inactive = Instance.new("Frame")
-local UICorner_8 = Instance.new("UICorner")
-local UIGradient_5 = Instance.new("UIGradient")
-local Main_4 = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
-local UIGradient_6 = Instance.new("UIGradient")
-local TextLabel_6 = Instance.new("TextLabel")
-local Icon_2 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
-local Keybind_2 = Instance.new("Frame")
-local UICorner_10 = Instance.new("UICorner")
-local TextLabel_7 = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
-local ActualWall = Instance.new("Frame")
-local Activee_2 = Instance.new("Frame")
-local Main_5 = Instance.new("Frame")
-local UICorner_11 = Instance.new("UICorner")
-local UIGradient_7 = Instance.new("UIGradient")
-local TextLabel_8 = Instance.new("TextLabel")
-local Keybind_3 = Instance.new("Frame")
-local UICorner_12 = Instance.new("UICorner")
-local TextLabel_9 = Instance.new("TextLabel")
-local Icon_3 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
-local UIGradient_8 = Instance.new("UIGradient")
-local UICorner_13 = Instance.new("UICorner")
-local Inactive_2 = Instance.new("Frame")
-local UICorner_14 = Instance.new("UICorner")
-local UIGradient_9 = Instance.new("UIGradient")
-local Main_6 = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
-local UIGradient_10 = Instance.new("UIGradient")
-local TextLabel_10 = Instance.new("TextLabel")
-local Icon_4 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-local Keybind_4 = Instance.new("Frame")
-local UICorner_16 = Instance.new("UICorner")
-local TextLabel_11 = Instance.new("TextLabel")
-local TextButton_2 = Instance.new("TextButton")
-local Settings = Instance.new("Frame")
-local Inactive_3 = Instance.new("Frame")
-local UICorner_17 = Instance.new("UICorner")
-local UIGradient_11 = Instance.new("UIGradient")
-local Main_7 = Instance.new("Frame")
-local UICorner_18 = Instance.new("UICorner")
-local UIGradient_12 = Instance.new("UIGradient")
-local TextLabel_12 = Instance.new("TextLabel")
-local Icon_5 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
-local Keybind_5 = Instance.new("Frame")
-local UICorner_19 = Instance.new("UICorner")
-local TextLabel_13 = Instance.new("TextLabel")
-local TextButton_3 = Instance.new("TextButton")
-local Glow_3 = Instance.new("ImageLabel")
-local CloseBtn = Instance.new("Frame")
-local Inactive_4 = Instance.new("Frame")
-local UICorner_20 = Instance.new("UICorner")
-local UIGradient_13 = Instance.new("UIGradient")
-local Main_8 = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
-local UIGradient_14 = Instance.new("UIGradient")
-local TextLabel_14 = Instance.new("TextLabel")
-local Icon_6 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
-local Keybind_6 = Instance.new("Frame")
-local UICorner_22 = Instance.new("UICorner")
-local TextLabel_15 = Instance.new("TextLabel")
-local TextButton_4 = Instance.new("TextButton")
-local RingGlow = Instance.new("ImageLabel")
-local SettingsFrame = Instance.new("Frame")
-local UICorner_23 = Instance.new("UICorner")
-local Navigation_2 = Instance.new("Frame")
-local UIListLayout_2 = Instance.new("UIListLayout")
-local InfGas = Instance.new("Frame")
-local Activee_3 = Instance.new("Frame")
-local Main_9 = Instance.new("Frame")
-local UICorner_24 = Instance.new("UICorner")
-local UIGradient_15 = Instance.new("UIGradient")
-local TextLabel_16 = Instance.new("TextLabel")
-local Icon_7 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
-local Keybind_7 = Instance.new("Frame")
-local UICorner_25 = Instance.new("UICorner")
-local TextLabel_17 = Instance.new("TextLabel")
-local UIGradient_16 = Instance.new("UIGradient")
-local UICorner_26 = Instance.new("UICorner")
-local Inactive_5 = Instance.new("Frame")
-local UICorner_27 = Instance.new("UICorner")
-local UIGradient_17 = Instance.new("UIGradient")
-local Main_10 = Instance.new("Frame")
-local UICorner_28 = Instance.new("UICorner")
-local UIGradient_18 = Instance.new("UIGradient")
-local Keybind_8 = Instance.new("Frame")
-local UICorner_29 = Instance.new("UICorner")
-local TextLabel_18 = Instance.new("TextLabel")
-local TextButton_5 = Instance.new("TextButton")
-local Icon_8 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
-local TextLabel_19 = Instance.new("TextLabel")
-local Glow_4 = Instance.new("ImageLabel")
-local TextButton_6 = Instance.new("TextButton")
-local UICorner_30 = Instance.new("UICorner")
-local Warn = Instance.new("Frame")
-local UICorner_31 = Instance.new("UICorner")
-local Glow_5 = Instance.new("ImageLabel")
-local TextButton_7 = Instance.new("TextButton")
-local UICorner_32 = Instance.new("UICorner")
-local TextLabel_20 = Instance.new("TextLabel")
-local OpenBtn = Instance.new("Frame")
-local Inactive_6 = Instance.new("Frame")
-local UICorner_33 = Instance.new("UICorner")
-local UIGradient_19 = Instance.new("UIGradient")
-local Main_11 = Instance.new("Frame")
-local UICorner_34 = Instance.new("UICorner")
-local UIGradient_20 = Instance.new("UIGradient")
-local TextLabel_21 = Instance.new("TextLabel")
-local Icon_9 = Instance.new("ImageLabel")
-local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
-local Keybind_9 = Instance.new("Frame")
-local UICorner_35 = Instance.new("UICorner")
-local TextLabel_22 = Instance.new("TextLabel")
-local Glow_6 = Instance.new("ImageLabel")
-local UICorner_36 = Instance.new("UICorner")
-local TextButton_8 = Instance.new("TextButton")
-
---Properties:
-
-Sidebar.Name = "Sidebar"
-Sidebar.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Sidebar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Sidebar.ResetOnSpawn = false
-
-Canvas.Name = "Canvas"
-Canvas.Parent = Sidebar
-Canvas.AnchorPoint = Vector2.new(0.5, 0.5)
-Canvas.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
-Canvas.BackgroundTransparency = 1.000
-Canvas.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Canvas.BorderSizePixel = 0
-Canvas.Position = UDim2.new(0.5, 0, 0.5, 0)
-Canvas.Size = UDim2.new(1, 0, 1, 0)
-
-Container.Name = "Container"
-Container.Parent = Canvas
-Container.AnchorPoint = Vector2.new(0.5, 0.5)
-Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Container.BackgroundTransparency = 1.000
-Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Container.BorderSizePixel = 0
-Container.Position = UDim2.new(0.5, 0, 0.5, 0)
-Container.Size = UDim2.new(0.208333328, 0, 0.788888872, 0)
-
-MainContainer.Name = "MainContainer"
-MainContainer.Parent = Container
-MainContainer.AnchorPoint = Vector2.new(0.5, 0.5)
-MainContainer.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
-MainContainer.BackgroundTransparency = 1.000
-MainContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MainContainer.BorderSizePixel = 0
-MainContainer.Position = UDim2.new(0.5, 0, 0.581313133, 0)
-MainContainer.Size = UDim2.new(1, 0, 0.837373734, 0)
-
-UICorner.CornerRadius = UDim.new(0.0799999982, 0)
-UICorner.Parent = MainContainer
-
-Main.Name = "Main"
-Main.Parent = MainContainer
-Main.AnchorPoint = Vector2.new(0.5, 0.5)
-Main.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
-Main.BackgroundTransparency = 0.050
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.496863723, 0, 0.418641806, 0)
-Main.Size = UDim2.new(0.984924555, 0, 0.956198752, 0)
-
-UICorner_2.CornerRadius = UDim.new(0.075000003, 0)
-UICorner_2.Parent = Main
-
-Profile.Name = "Profile"
-Profile.Parent = Main
-Profile.AnchorPoint = Vector2.new(0.5, 0.5)
-Profile.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Profile.BackgroundTransparency = 1.000
-Profile.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Profile.BorderSizePixel = 0
-Profile.Position = UDim2.new(0.500000119, 0, 0.121905304, 0)
-Profile.Size = UDim2.new(0.900510132, 0, 0.197602034, 0)
-
-Main_2.Name = "Main "
-Main_2.Parent = Profile
-Main_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_2.BorderSizePixel = 0
-Main_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_2.Size = UDim2.new(1, 0, 1, 0)
-
-UICorner_3.CornerRadius = UDim.new(0.150000006, 0)
-UICorner_3.Parent = Main_2
-
-Avatar.Name = "Avatar"
-Avatar.Parent = Main_2
-Avatar.AnchorPoint = Vector2.new(0.5, 0.5)
-Avatar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Avatar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Avatar.BorderSizePixel = 0
-Avatar.Position = UDim2.new(0.157223791, 0, 0.50000006, 0)
-Avatar.Size = UDim2.new(0.243626058, 0, 0.803738356, 0)
-
-UICorner_4.CornerRadius = UDim.new(0.200000003, 0)
-UICorner_4.Parent = Avatar
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(15, 15, 17)), ColorSequenceKeypoint.new(0.53, Color3.fromRGB(24, 24, 27)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(15, 15, 17))}
-UIGradient.Rotation = -90
-UIGradient.Parent = Avatar
-
-Glow.Name = "Glow"
-Glow.Parent = Avatar
-Glow.AnchorPoint = Vector2.new(0.5, 0.5)
-Glow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Glow.BackgroundTransparency = 1.000
-Glow.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Glow.BorderSizePixel = 0
-Glow.Position = UDim2.new(0.5, 0, 0.5, 0)
-Glow.Size = UDim2.new(1, 0, 1, 0)
-Glow.ZIndex = 0
-Glow.Image = "rbxassetid://17251150022"
-
-TextLabel.Parent = Main_2
-TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.519984961, 0, 0.266770691, 0)
-TextLabel.Size = UDim2.new(0.416430593, 0, 0.33644861, 0)
-TextLabel.Font = Enum.Font.SourceSansBold
-TextLabel.Text = "---"
-TextLabel.TextColor3 = Color3.fromRGB(204, 204, 211)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-
-TextLabel_2.Parent = Main_2
-TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.448153108, 0, 0.537350655, 0)
-TextLabel_2.Size = UDim2.new(0.274787545, 0, 0.214953288, 0)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "--"
-TextLabel_2.TextColor3 = Color3.fromRGB(113, 113, 117)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
-
-Glow_2.Name = "Glow"
-Glow_2.Parent = Main_2
-Glow_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Glow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Glow_2.BackgroundTransparency = 1.000
-Glow_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Glow_2.BorderSizePixel = 0
-Glow_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-Glow_2.Size = UDim2.new(1, 0, 1, 0)
-Glow_2.ZIndex = 0
-Glow_2.Image = "rbxassetid://17251150022"
-Glow_2.ImageColor3 = Color3.fromRGB(2, 154, 255)
-
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 28)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(34, 34, 38))}
-UIGradient_2.Rotation = -45
-UIGradient_2.Parent = Main_2
-
-TextLabel_3.Parent = Main_2
-TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.636868477, 0, 0.783765495, 0)
-TextLabel_3.Size = UDim2.new(0.652218223, 0, 0.214953259, 0)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "--"
-TextLabel_3.TextColor3 = Color3.fromRGB(187, 187, 193)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
-TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
-
-Navigation.Name = "Navigation"
-Navigation.Parent = Main
-Navigation.AnchorPoint = Vector2.new(0.5, 0.5)
-Navigation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Navigation.BackgroundTransparency = 1.000
-Navigation.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Navigation.BorderSizePixel = 0
-Navigation.Position = UDim2.new(0.5, 0, 0.312796205, 0)
-Navigation.Size = UDim2.new(0.90561223, 0, 0.0722748786, 0)
-
-UIListLayout.Parent = Navigation
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0.200000003, 0)
-
-PlayerESP.Name = "PlayerESP"
-PlayerESP.Parent = Navigation
-PlayerESP.AnchorPoint = Vector2.new(0.5, 0.5)
-PlayerESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerESP.BackgroundTransparency = 1.000
-PlayerESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerESP.BorderSizePixel = 0
-PlayerESP.Position = UDim2.new(0.5, 0, 0.5, 0)
-PlayerESP.Size = UDim2.new(1, 0, 1, 0)
-
-Activee.Name = "Activee"
-Activee.Parent = PlayerESP
-Activee.AnchorPoint = Vector2.new(0.5, 0.5)
-Activee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Activee.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Activee.BorderSizePixel = 0
-Activee.Position = UDim2.new(0.5, 0, 0.5, 0)
-Activee.Size = UDim2.new(1, 0, 1, 0)
-Activee.Visible = false
-
-Main_3.Name = "Main"
-Main_3.Parent = Activee
-Main_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_3.BorderSizePixel = 0
-Main_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_3.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_5.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_5.Parent = Main_3
-
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_3.Parent = Main_3
-
-TextLabel_4.Parent = Main_3
-TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_4.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_4.Font = Enum.Font.SourceSansBold
-TextLabel_4.Text = "Player ESP"
-TextLabel_4.TextColor3 = Color3.fromRGB(221, 224, 234)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextWrapped = true
-TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
-
-Keybind.Name = "Keybind"
-Keybind.Parent = Main_3
-Keybind.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind.BackgroundColor3 = Color3.fromRGB(44, 44, 46)
-Keybind.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind.BorderSizePixel = 0
-Keybind.Position = UDim2.new(0.857954443, 0, 0.5, 0)
-Keybind.Size = UDim2.new(0.101785712, 0, 0.577850878, 0)
-
-UICorner_6.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_6.Parent = Keybind
-
-TextLabel_5.Parent = Keybind
-TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.5, 0, 0.500000119, 0)
-TextLabel_5.Size = UDim2.new(0.5, 0, 0.785714269, 0)
-TextLabel_5.Font = Enum.Font.SourceSansBold
-TextLabel_5.Text = "on"
-TextLabel_5.TextColor3 = Color3.fromRGB(113, 113, 117)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 14.000
-TextLabel_5.TextWrapped = true
-
-Icon.Name = "Icon"
-Icon.Parent = Main_3
-Icon.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon.BackgroundTransparency = 1.000
-Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon.BorderSizePixel = 0
-Icon.Position = UDim2.new(0.132133082, 0, 0.499999881, 0)
-Icon.Size = UDim2.new(0.0795466676, 0, 0.730925918, 0)
-Icon.Image = "rbxassetid://17711192230"
-Icon.ImageColor3 = Color3.fromRGB(221, 224, 234)
-
-UIAspectRatioConstraint.Parent = Icon
-
-UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_4.Parent = Activee
-
-UICorner_7.CornerRadius = UDim.new(0.25, 0)
-UICorner_7.Parent = Activee
-
-Inactive.Name = "Inactive"
-Inactive.Parent = PlayerESP
-Inactive.AnchorPoint = Vector2.new(0.5, 0.5)
-Inactive.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Inactive.BackgroundTransparency = 1.000
-Inactive.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Inactive.BorderSizePixel = 0
-Inactive.Position = UDim2.new(0.5, 0, 0.5, 0)
-Inactive.Size = UDim2.new(1, 0, 1, 0)
-
-UICorner_8.CornerRadius = UDim.new(0.25, 0)
-UICorner_8.Parent = Inactive
-
-UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_5.Parent = Inactive
-
-Main_4.Name = "Main"
-Main_4.Parent = Inactive
-Main_4.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_4.BackgroundTransparency = 1.000
-Main_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_4.BorderSizePixel = 0
-Main_4.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_4.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_9.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_9.Parent = Main_4
-
-UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_6.Parent = Main_4
-
-TextLabel_6.Parent = Main_4
-TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_6.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_6.Font = Enum.Font.SourceSansBold
-TextLabel_6.Text = "Player ESP"
-TextLabel_6.TextColor3 = Color3.fromRGB(108, 107, 111)
-TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 14.000
-TextLabel_6.TextWrapped = true
-TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
-
-Icon_2.Name = "Icon"
-Icon_2.Parent = Main_4
-Icon_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_2.BackgroundTransparency = 1.000
-Icon_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_2.BorderSizePixel = 0
-Icon_2.Position = UDim2.new(0.132133082, 0, 0.499999881, 0)
-Icon_2.Size = UDim2.new(0.0795466676, 0, 0.730925918, 0)
-Icon_2.Image = "rbxassetid://17711192230"
-Icon_2.ImageColor3 = Color3.fromRGB(108, 107, 111)
-
-UIAspectRatioConstraint_2.Parent = Icon_2
-
-Keybind_2.Name = "Keybind"
-Keybind_2.Parent = Main_4
-Keybind_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_2.BackgroundColor3 = Color3.fromRGB(44, 44, 46)
-Keybind_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_2.BorderSizePixel = 0
-Keybind_2.Position = UDim2.new(0.857954443, 0, 0.5, 0)
-Keybind_2.Size = UDim2.new(0.101785712, 0, 0.577850878, 0)
-
-UICorner_10.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_10.Parent = Keybind_2
-
-TextLabel_7.Parent = Keybind_2
-TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_7.BorderSizePixel = 0
-TextLabel_7.Position = UDim2.new(0.5, 0, 0.500000119, 0)
-TextLabel_7.Size = UDim2.new(0.5, 0, 0.785714269, 0)
-TextLabel_7.Font = Enum.Font.SourceSansBold
-TextLabel_7.Text = "off"
-TextLabel_7.TextColor3 = Color3.fromRGB(113, 113, 117)
-TextLabel_7.TextScaled = true
-TextLabel_7.TextSize = 14.000
-TextLabel_7.TextWrapped = true
-
-TextButton.Parent = PlayerESP
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BackgroundTransparency = 1.000
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.0679733455, 0, -0.02059073, 0)
-TextButton.Size = UDim2.new(0.876399696, 0, 0.999999881, 0)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = ""
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-
-ActualWall.Name = "ActualWall "
-ActualWall.Parent = Navigation
-ActualWall.AnchorPoint = Vector2.new(0.5, 0.5)
-ActualWall.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ActualWall.BackgroundTransparency = 1.000
-ActualWall.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ActualWall.BorderSizePixel = 0
-ActualWall.Position = UDim2.new(0.5, 0, 0.5, 0)
-ActualWall.Size = UDim2.new(1, 0, 1, 0)
-
-Activee_2.Name = "Activee"
-Activee_2.Parent = ActualWall
-Activee_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Activee_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Activee_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Activee_2.BorderSizePixel = 0
-Activee_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-Activee_2.Size = UDim2.new(1, 0, 1, 0)
-Activee_2.Visible = false
-
-Main_5.Name = "Main"
-Main_5.Parent = Activee_2
-Main_5.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_5.BorderSizePixel = 0
-Main_5.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_5.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_11.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_11.Parent = Main_5
-
-UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_7.Parent = Main_5
-
-TextLabel_8.Parent = Main_5
-TextLabel_8.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_8.BorderSizePixel = 0
-TextLabel_8.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_8.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_8.Font = Enum.Font.SourceSansBold
-TextLabel_8.Text = "Aim Bot "
-TextLabel_8.TextColor3 = Color3.fromRGB(221, 224, 234)
-TextLabel_8.TextScaled = true
-TextLabel_8.TextSize = 14.000
-TextLabel_8.TextWrapped = true
-TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
-
-Keybind_3.Name = "Keybind"
-Keybind_3.Parent = Main_5
-Keybind_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_3.BackgroundColor3 = Color3.fromRGB(44, 44, 46)
-Keybind_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_3.BorderSizePixel = 0
-Keybind_3.Position = UDim2.new(0.857954443, 0, 0.5, 0)
-Keybind_3.Size = UDim2.new(0.101785712, 0, 0.577850878, 0)
-
-UICorner_12.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_12.Parent = Keybind_3
-
-TextLabel_9.Parent = Keybind_3
-TextLabel_9.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0.5, 0, 0.500000119, 0)
-TextLabel_9.Size = UDim2.new(0.5, 0, 0.785714269, 0)
-TextLabel_9.Font = Enum.Font.SourceSansBold
-TextLabel_9.Text = "on"
-TextLabel_9.TextColor3 = Color3.fromRGB(113, 113, 117)
-TextLabel_9.TextScaled = true
-TextLabel_9.TextSize = 14.000
-TextLabel_9.TextWrapped = true
-
-Icon_3.Name = "Icon"
-Icon_3.Parent = Main_5
-Icon_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_3.BackgroundTransparency = 1.000
-Icon_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_3.BorderSizePixel = 0
-Icon_3.Position = UDim2.new(0.132133082, 0, 0.499999881, 0)
-Icon_3.Size = UDim2.new(0.0795466676, 0, 0.730925918, 0)
-Icon_3.Image = "rbxassetid://17710812596"
-Icon_3.ImageColor3 = Color3.fromRGB(221, 224, 234)
-
-UIAspectRatioConstraint_3.Parent = Icon_3
-
-UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_8.Parent = Activee_2
-
-UICorner_13.CornerRadius = UDim.new(0.25, 0)
-UICorner_13.Parent = Activee_2
-
-Inactive_2.Name = "Inactive"
-Inactive_2.Parent = ActualWall
-Inactive_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Inactive_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Inactive_2.BackgroundTransparency = 1.000
-Inactive_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Inactive_2.BorderSizePixel = 0
-Inactive_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-Inactive_2.Size = UDim2.new(1, 0, 1, 0)
-
-UICorner_14.CornerRadius = UDim.new(0.25, 0)
-UICorner_14.Parent = Inactive_2
-
-UIGradient_9.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_9.Parent = Inactive_2
-
-Main_6.Name = "Main"
-Main_6.Parent = Inactive_2
-Main_6.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_6.BackgroundTransparency = 1.000
-Main_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_6.BorderSizePixel = 0
-Main_6.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_6.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_15.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_15.Parent = Main_6
-
-UIGradient_10.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_10.Parent = Main_6
-
-TextLabel_10.Parent = Main_6
-TextLabel_10.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_10.BorderSizePixel = 0
-TextLabel_10.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_10.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_10.Font = Enum.Font.SourceSansBold
-TextLabel_10.Text = "Aim Bot "
-TextLabel_10.TextColor3 = Color3.fromRGB(108, 107, 111)
-TextLabel_10.TextScaled = true
-TextLabel_10.TextSize = 14.000
-TextLabel_10.TextWrapped = true
-TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
-
-Icon_4.Name = "Icon"
-Icon_4.Parent = Main_6
-Icon_4.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_4.BackgroundTransparency = 1.000
-Icon_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_4.BorderSizePixel = 0
-Icon_4.Position = UDim2.new(0.132133082, 0, 0.499999881, 0)
-Icon_4.Size = UDim2.new(0.0795466676, 0, 0.730925918, 0)
-Icon_4.Image = "rbxassetid://17710812596"
-Icon_4.ImageColor3 = Color3.fromRGB(108, 107, 111)
-
-UIAspectRatioConstraint_4.Parent = Icon_4
-
-Keybind_4.Name = "Keybind"
-Keybind_4.Parent = Main_6
-Keybind_4.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_4.BackgroundColor3 = Color3.fromRGB(44, 44, 46)
-Keybind_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_4.BorderSizePixel = 0
-Keybind_4.Position = UDim2.new(0.857954443, 0, 0.5, 0)
-Keybind_4.Size = UDim2.new(0.101785712, 0, 0.577850878, 0)
-
-UICorner_16.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_16.Parent = Keybind_4
-
-TextLabel_11.Parent = Keybind_4
-TextLabel_11.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.BackgroundTransparency = 1.000
-TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_11.BorderSizePixel = 0
-TextLabel_11.Position = UDim2.new(0.5, 0, 0.500000119, 0)
-TextLabel_11.Size = UDim2.new(0.5, 0, 0.785714269, 0)
-TextLabel_11.Font = Enum.Font.SourceSansBold
-TextLabel_11.Text = "off"
-TextLabel_11.TextColor3 = Color3.fromRGB(113, 113, 117)
-TextLabel_11.TextScaled = true
-TextLabel_11.TextSize = 14.000
-TextLabel_11.TextWrapped = true
-
-TextButton_2.Parent = ActualWall
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.BackgroundTransparency = 1.000
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.0679733455, 0, -0.02059073, 0)
-TextButton_2.Size = UDim2.new(0.876399696, 0, 0.999999881, 0)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = ""
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextSize = 14.000
-
-Settings.Name = "Settings"
-Settings.Parent = Main
-Settings.AnchorPoint = Vector2.new(0.5, 0.5)
-Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Settings.BackgroundTransparency = 1.000
-Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Settings.BorderSizePixel = 0
-Settings.Position = UDim2.new(0.496815711, 0, 0.847535431, 0)
-Settings.Size = UDim2.new(0.90561223, 0, 0.0724089742, 0)
-
-Inactive_3.Name = "Inactive"
-Inactive_3.Parent = Settings
-Inactive_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Inactive_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Inactive_3.BackgroundTransparency = 1.000
-Inactive_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Inactive_3.BorderSizePixel = 0
-Inactive_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Inactive_3.Size = UDim2.new(1, 0, 1, 0)
-
-UICorner_17.CornerRadius = UDim.new(0.25, 0)
-UICorner_17.Parent = Inactive_3
-
-UIGradient_11.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_11.Parent = Inactive_3
-
-Main_7.Name = "Main"
-Main_7.Parent = Inactive_3
-Main_7.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_7.BackgroundTransparency = 1.000
-Main_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_7.BorderSizePixel = 0
-Main_7.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_7.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_18.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_18.Parent = Main_7
-
-UIGradient_12.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_12.Parent = Main_7
-
-TextLabel_12.Parent = Main_7
-TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.BackgroundTransparency = 1.000
-TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_12.BorderSizePixel = 0
-TextLabel_12.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_12.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_12.Font = Enum.Font.SourceSansBold
-TextLabel_12.Text = "N Sploit | Settings"
-TextLabel_12.TextColor3 = Color3.fromRGB(248, 246, 255)
-TextLabel_12.TextScaled = true
-TextLabel_12.TextSize = 14.000
-TextLabel_12.TextWrapped = true
-TextLabel_12.TextXAlignment = Enum.TextXAlignment.Left
-
-Icon_5.Name = "Icon"
-Icon_5.Parent = Main_7
-Icon_5.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_5.BackgroundTransparency = 1.000
-Icon_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_5.BorderSizePixel = 0
-Icon_5.Position = UDim2.new(0.125, 0, 0.5, 0)
-Icon_5.Size = UDim2.new(0.0763392895, 0, 0.46875, 0)
-Icon_5.Image = "rbxassetid://17710738145"
-Icon_5.ImageColor3 = Color3.fromRGB(248, 246, 255)
-
-UIAspectRatioConstraint_5.Parent = Icon_5
-
-Keybind_5.Name = "Keybind"
-Keybind_5.Parent = Main_7
-Keybind_5.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_5.BackgroundColor3 = Color3.fromRGB(102, 102, 107)
-Keybind_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_5.BorderSizePixel = 0
-Keybind_5.Position = UDim2.new(0.782767415, 0, 0.500000596, 0)
-Keybind_5.Size = UDim2.new(0.343040466, 0, 0.577850878, 0)
-
-UICorner_19.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_19.Parent = Keybind_5
-
-TextLabel_13.Parent = Keybind_5
-TextLabel_13.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BackgroundTransparency = 1.000
-TextLabel_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_13.BorderSizePixel = 0
-TextLabel_13.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_13.Size = UDim2.new(1.09459627, 0, 0.720962763, 0)
-TextLabel_13.Font = Enum.Font.SourceSansBold
-TextLabel_13.Text = "Open"
-TextLabel_13.TextColor3 = Color3.fromRGB(210, 210, 218)
-TextLabel_13.TextScaled = true
-TextLabel_13.TextSize = 14.000
-TextLabel_13.TextWrapped = true
-
-TextButton_3.Parent = Main_7
-TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_3.BackgroundTransparency = 1.000
-TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.608407736, 0, 0.196267858, 0)
-TextButton_3.Size = UDim2.new(0.342999995, 0, 0.578000009, 0)
-TextButton_3.Font = Enum.Font.SourceSans
-TextButton_3.Text = ""
-TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.TextSize = 14.000
-
-Glow_3.Name = "Glow"
-Glow_3.Parent = Main
-Glow_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Glow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Glow_3.BackgroundTransparency = 1.000
-Glow_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Glow_3.BorderSizePixel = 0
-Glow_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Glow_3.Size = UDim2.new(1, 0, 1, 0)
-Glow_3.ZIndex = 0
-Glow_3.Image = "rbxassetid://17251150191"
-Glow_3.ImageColor3 = Color3.fromRGB(0, 123, 255)
-
-CloseBtn.Name = "CloseBtn"
-CloseBtn.Parent = Main
-CloseBtn.AnchorPoint = Vector2.new(0.5, 0.5)
-CloseBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CloseBtn.BackgroundTransparency = 1.000
-CloseBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CloseBtn.BorderSizePixel = 0
-CloseBtn.Position = UDim2.new(0.5, 0, 0.925000012, 0)
-CloseBtn.Size = UDim2.new(0.90561223, 0, 0.0724089742, 0)
-
-Inactive_4.Name = "Inactive"
-Inactive_4.Parent = CloseBtn
-Inactive_4.AnchorPoint = Vector2.new(0.5, 0.5)
-Inactive_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Inactive_4.BackgroundTransparency = 1.000
-Inactive_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Inactive_4.BorderSizePixel = 0
-Inactive_4.Position = UDim2.new(0.5, 0, 0.5, 0)
-Inactive_4.Size = UDim2.new(1, 0, 1, 0)
-
-UICorner_20.CornerRadius = UDim.new(0.25, 0)
-UICorner_20.Parent = Inactive_4
-
-UIGradient_13.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_13.Parent = Inactive_4
-
-Main_8.Name = "Main"
-Main_8.Parent = Inactive_4
-Main_8.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_8.BackgroundTransparency = 1.000
-Main_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_8.BorderSizePixel = 0
-Main_8.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_8.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_21.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_21.Parent = Main_8
-
-UIGradient_14.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_14.Parent = Main_8
-
-TextLabel_14.Parent = Main_8
-TextLabel_14.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BackgroundTransparency = 1.000
-TextLabel_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_14.BorderSizePixel = 0
-TextLabel_14.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_14.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_14.Font = Enum.Font.SourceSansBold
-TextLabel_14.Text = "N Sploit | Close"
-TextLabel_14.TextColor3 = Color3.fromRGB(248, 246, 255)
-TextLabel_14.TextScaled = true
-TextLabel_14.TextSize = 14.000
-TextLabel_14.TextWrapped = true
-TextLabel_14.TextXAlignment = Enum.TextXAlignment.Left
-
-Icon_6.Name = "Icon"
-Icon_6.Parent = Main_8
-Icon_6.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_6.BackgroundTransparency = 1.000
-Icon_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_6.BorderSizePixel = 0
-Icon_6.Position = UDim2.new(0.125, 0, 0.5, 0)
-Icon_6.Size = UDim2.new(0.0763392895, 0, 0.46875, 0)
-Icon_6.Image = "rbxassetid://17710738145"
-Icon_6.ImageColor3 = Color3.fromRGB(248, 246, 255)
-
-UIAspectRatioConstraint_6.Parent = Icon_6
-
-Keybind_6.Name = "Keybind"
-Keybind_6.Parent = Main_8
-Keybind_6.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_6.BackgroundColor3 = Color3.fromRGB(102, 102, 107)
-Keybind_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_6.BorderSizePixel = 0
-Keybind_6.Position = UDim2.new(0.842221916, 0, 0.500000596, 0)
-Keybind_6.Size = UDim2.new(0.224130496, 0, 0.577850878, 0)
-
-UICorner_22.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_22.Parent = Keybind_6
-
-TextLabel_15.Parent = Keybind_6
-TextLabel_15.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.BackgroundTransparency = 1.000
-TextLabel_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_15.BorderSizePixel = 0
-TextLabel_15.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_15.Size = UDim2.new(1.09459627, 0, 0.720962763, 0)
-TextLabel_15.Font = Enum.Font.SourceSansBold
-TextLabel_15.Text = "LeftControl"
-TextLabel_15.TextColor3 = Color3.fromRGB(210, 210, 218)
-TextLabel_15.TextScaled = true
-TextLabel_15.TextSize = 14.000
-TextLabel_15.TextWrapped = true
-
-TextButton_4.Parent = Main_8
-TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_4.BackgroundTransparency = 1.000
-TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(0.0994931534, 0, 9.98269911e-07, 0)
-TextButton_4.Size = UDim2.new(0, 242, 0, 24)
-TextButton_4.Font = Enum.Font.SourceSans
-TextButton_4.Text = ""
-TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.TextSize = 14.000
-
-RingGlow.Name = "RingGlow"
-RingGlow.Parent = MainContainer
-RingGlow.AnchorPoint = Vector2.new(0.5, 0.5)
-RingGlow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RingGlow.BackgroundTransparency = 1.000
-RingGlow.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RingGlow.BorderSizePixel = 0
-RingGlow.Position = UDim2.new(0.5, 0, 0.5, 0)
-RingGlow.Size = UDim2.new(1.40750003, 0, 1.19131458, 0)
-RingGlow.ZIndex = 0
-RingGlow.Image = "rbxassetid://17324278559"
-RingGlow.ImageColor3 = Color3.fromRGB(3, 154, 255)
-
-SettingsFrame.Name = "SettingsFrame"
-SettingsFrame.Parent = MainContainer
-SettingsFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-SettingsFrame.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
-SettingsFrame.BackgroundTransparency = 0.050
-SettingsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SettingsFrame.BorderSizePixel = 0
-SettingsFrame.Position = UDim2.new(0.496863812, 0, 0.404093832, 0)
-SettingsFrame.Size = UDim2.new(0.835460961, 0, 0.332064629, 0)
-SettingsFrame.Visible = false
-
-UICorner_23.CornerRadius = UDim.new(0.075000003, 0)
-UICorner_23.Parent = SettingsFrame
-
-Navigation_2.Name = "Navigation"
-Navigation_2.Parent = SettingsFrame
-Navigation_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Navigation_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Navigation_2.BackgroundTransparency = 1.000
-Navigation_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Navigation_2.BorderSizePixel = 0
-Navigation_2.Position = UDim2.new(0.5, 0, 0.441204637, 0)
-Navigation_2.Size = UDim2.new(0.90561223, 0, 0.18457298, 0)
-
-UIListLayout_2.Parent = Navigation_2
-UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_2.Padding = UDim.new(0.200000003, 0)
-
-InfGas.Name = "InfGas"
-InfGas.Parent = Navigation_2
-InfGas.AnchorPoint = Vector2.new(0.5, 0.5)
-InfGas.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InfGas.BackgroundTransparency = 1.000
-InfGas.BorderColor3 = Color3.fromRGB(0, 0, 0)
-InfGas.BorderSizePixel = 0
-InfGas.Position = UDim2.new(0.5, 0, 0.783785284, 0)
-InfGas.Size = UDim2.new(1, 0, 1.56757057, 0)
-
-Activee_3.Name = "Activee"
-Activee_3.Parent = InfGas
-Activee_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Activee_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Activee_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Activee_3.BorderSizePixel = 0
-Activee_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Activee_3.Size = UDim2.new(1, 0, 1, 0)
-Activee_3.Visible = false
-
-Main_9.Name = "Main"
-Main_9.Parent = Activee_3
-Main_9.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_9.BorderSizePixel = 0
-Main_9.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_9.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_24.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_24.Parent = Main_9
-
-UIGradient_15.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_15.Parent = Main_9
-
-TextLabel_16.Parent = Main_9
-TextLabel_16.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.BackgroundTransparency = 1.000
-TextLabel_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_16.BorderSizePixel = 0
-TextLabel_16.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_16.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_16.Font = Enum.Font.SourceSansBold
-TextLabel_16.Text = "Infinity Gas"
-TextLabel_16.TextColor3 = Color3.fromRGB(221, 224, 234)
-TextLabel_16.TextScaled = true
-TextLabel_16.TextSize = 14.000
-TextLabel_16.TextWrapped = true
-TextLabel_16.TextXAlignment = Enum.TextXAlignment.Left
-
-Icon_7.Name = "Icon"
-Icon_7.Parent = Main_9
-Icon_7.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_7.BackgroundTransparency = 1.000
-Icon_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_7.BorderSizePixel = 0
-Icon_7.Position = UDim2.new(0.125, 0, 0.5, 0)
-Icon_7.Size = UDim2.new(0.0852272734, 0, 0.46875, 0)
-Icon_7.Image = "rbxassetid://17721317018"
-Icon_7.ImageColor3 = Color3.fromRGB(221, 224, 234)
-
-UIAspectRatioConstraint_7.Parent = Icon_7
-
-Keybind_7.Name = "Keybind"
-Keybind_7.Parent = Main_9
-Keybind_7.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_7.BackgroundColor3 = Color3.fromRGB(44, 44, 46)
-Keybind_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_7.BorderSizePixel = 0
-Keybind_7.Position = UDim2.new(0.857954443, 0, 0.5, 0)
-Keybind_7.Size = UDim2.new(0.101785712, 0, 0.577850878, 0)
-
-UICorner_25.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_25.Parent = Keybind_7
-
-TextLabel_17.Parent = Keybind_7
-TextLabel_17.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.BackgroundTransparency = 1.000
-TextLabel_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_17.BorderSizePixel = 0
-TextLabel_17.Position = UDim2.new(0.5, 0, 0.500000119, 0)
-TextLabel_17.Size = UDim2.new(0.5, 0, 0.785714269, 0)
-TextLabel_17.Font = Enum.Font.SourceSansBold
-TextLabel_17.Text = "On"
-TextLabel_17.TextColor3 = Color3.fromRGB(113, 113, 117)
-TextLabel_17.TextScaled = true
-TextLabel_17.TextSize = 14.000
-TextLabel_17.TextWrapped = true
-
-UIGradient_16.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_16.Parent = Activee_3
-
-UICorner_26.CornerRadius = UDim.new(0.25, 0)
-UICorner_26.Parent = Activee_3
-
-Inactive_5.Name = "Inactive"
-Inactive_5.Parent = InfGas
-Inactive_5.AnchorPoint = Vector2.new(0.5, 0.5)
-Inactive_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Inactive_5.BackgroundTransparency = 1.000
-Inactive_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Inactive_5.BorderSizePixel = 0
-Inactive_5.Position = UDim2.new(0.5, 0, 0.5, 0)
-Inactive_5.Size = UDim2.new(1, 0, 1, 0)
-
-UICorner_27.CornerRadius = UDim.new(0.25, 0)
-UICorner_27.Parent = Inactive_5
-
-UIGradient_17.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_17.Parent = Inactive_5
-
-Main_10.Name = "Main"
-Main_10.Parent = Inactive_5
-Main_10.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_10.BackgroundTransparency = 1.000
-Main_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_10.BorderSizePixel = 0
-Main_10.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_10.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_28.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_28.Parent = Main_10
-
-UIGradient_18.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_18.Parent = Main_10
-
-Keybind_8.Name = "Keybind"
-Keybind_8.Parent = Main_10
-Keybind_8.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_8.BackgroundColor3 = Color3.fromRGB(44, 44, 46)
-Keybind_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_8.BorderSizePixel = 0
-Keybind_8.Position = UDim2.new(0.775963902, 0, 0.499999821, 0)
-Keybind_8.Size = UDim2.new(0.265766293, 0, 0.577850878, 0)
-
-UICorner_29.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_29.Parent = Keybind_8
-
-TextLabel_18.Parent = Keybind_8
-TextLabel_18.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.BackgroundTransparency = 1.000
-TextLabel_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_18.BorderSizePixel = 0
-TextLabel_18.Position = UDim2.new(0.500000179, 0, 0.500000477, 0)
-TextLabel_18.Size = UDim2.new(1.00000036, 0, 0.785714209, 0)
-TextLabel_18.Font = Enum.Font.SourceSansBold
-TextLabel_18.Text = "LeftControl"
-TextLabel_18.TextColor3 = Color3.fromRGB(245, 245, 254)
-TextLabel_18.TextScaled = true
-TextLabel_18.TextSize = 14.000
-TextLabel_18.TextWrapped = true
-
-TextButton_5.Parent = Keybind_8
-TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_5.BackgroundTransparency = 1.000
-TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.BorderSizePixel = 0
-TextButton_5.Position = UDim2.new(0, 0, -0.050553672, 0)
-TextButton_5.Size = UDim2.new(0, 63, 0, 24)
-TextButton_5.Font = Enum.Font.SourceSans
-TextButton_5.Text = ""
-TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.TextSize = 14.000
-
-Icon_8.Name = "Icon"
-Icon_8.Parent = Main_10
-Icon_8.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_8.BackgroundTransparency = 1.000
-Icon_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_8.BorderSizePixel = 0
-Icon_8.Position = UDim2.new(0.125, 0, 0.5, 0)
-Icon_8.Size = UDim2.new(0.0852272734, 0, 0.46875, 0)
-Icon_8.ZIndex = 10
-Icon_8.Image = "rbxassetid://17710738145"
-Icon_8.ImageColor3 = Color3.fromRGB(221, 224, 234)
-
-UIAspectRatioConstraint_8.Parent = Icon_8
-
-TextLabel_19.Parent = Main_10
-TextLabel_19.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_19.BackgroundTransparency = 1.000
-TextLabel_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_19.BorderSizePixel = 0
-TextLabel_19.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_19.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_19.Font = Enum.Font.SourceSansBold
-TextLabel_19.Text = "Close Button"
-TextLabel_19.TextColor3 = Color3.fromRGB(221, 224, 234)
-TextLabel_19.TextScaled = true
-TextLabel_19.TextSize = 14.000
-TextLabel_19.TextWrapped = true
-TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
-
-Glow_4.Name = "Glow"
-Glow_4.Parent = SettingsFrame
-Glow_4.AnchorPoint = Vector2.new(0.5, 0.5)
-Glow_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Glow_4.BackgroundTransparency = 1.000
-Glow_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Glow_4.BorderSizePixel = 0
-Glow_4.Position = UDim2.new(0.5, 0, 0.5, 0)
-Glow_4.Size = UDim2.new(1, 0, 1, 0)
-Glow_4.ZIndex = 0
-Glow_4.Image = "rbxassetid://17251150191"
-Glow_4.ImageColor3 = Color3.fromRGB(0, 123, 255)
-
-TextButton_6.Parent = SettingsFrame
-TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_6.BackgroundTransparency = 0.850
-TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_6.BorderSizePixel = 0
-TextButton_6.Position = UDim2.new(0.86501056, 0, -0.138981059, 0)
-TextButton_6.Size = UDim2.new(0, 52, 0, 50)
-TextButton_6.Font = Enum.Font.SourceSans
-TextButton_6.Text = "X"
-TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_6.TextScaled = true
-TextButton_6.TextSize = 14.000
-TextButton_6.TextWrapped = true
-
-UICorner_30.CornerRadius = UDim.new(0, 100)
-UICorner_30.Parent = TextButton_6
-
-Warn.Name = "Warn"
-Warn.Parent = MainContainer
-Warn.AnchorPoint = Vector2.new(0.5, 0.5)
-Warn.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
-Warn.BackgroundTransparency = 0.050
-Warn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Warn.BorderSizePixel = 0
-Warn.Position = UDim2.new(0.496863931, 0, 0.3601408, 0)
-Warn.Size = UDim2.new(0.835460961, 0, 0.244158551, 0)
-Warn.Visible = false
-
-UICorner_31.CornerRadius = UDim.new(0.075000003, 0)
-UICorner_31.Parent = Warn
-
-Glow_5.Name = "Glow"
-Glow_5.Parent = Warn
-Glow_5.AnchorPoint = Vector2.new(0.5, 0.5)
-Glow_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Glow_5.BackgroundTransparency = 1.000
-Glow_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Glow_5.BorderSizePixel = 0
-Glow_5.Position = UDim2.new(0.5, 0, 0.5, 0)
-Glow_5.Size = UDim2.new(1, 0, 1, 0)
-Glow_5.ZIndex = 0
-Glow_5.Image = "rbxassetid://17251150191"
-Glow_5.ImageColor3 = Color3.fromRGB(0, 123, 255)
-
-TextButton_7.Parent = Warn
-TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_7.BackgroundTransparency = 0.850
-TextButton_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_7.BorderSizePixel = 0
-TextButton_7.Position = UDim2.new(0.86501056, 0, -0.138981059, 0)
-TextButton_7.Size = UDim2.new(0, 52, 0, 50)
-TextButton_7.Font = Enum.Font.SourceSans
-TextButton_7.Text = "X"
-TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_7.TextScaled = true
-TextButton_7.TextSize = 14.000
-TextButton_7.TextWrapped = true
-
-UICorner_32.CornerRadius = UDim.new(0, 100)
-UICorner_32.Parent = TextButton_7
-
-TextLabel_20.Parent = Warn
-TextLabel_20.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_20.BackgroundTransparency = 1.000
-TextLabel_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_20.BorderSizePixel = 0
-TextLabel_20.Position = UDim2.new(0.502026498, 0, 0.584761322, 0)
-TextLabel_20.Size = UDim2.new(0.906558514, 0, 0.553634405, 0)
-TextLabel_20.Font = Enum.Font.SourceSansBold
-TextLabel_20.Text = "You press the button too fast\\n"
-TextLabel_20.TextColor3 = Color3.fromRGB(204, 204, 211)
-TextLabel_20.TextScaled = true
-TextLabel_20.TextSize = 14.000
-TextLabel_20.TextWrapped = true
-TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
-
-OpenBtn.Name = "OpenBtn"
-OpenBtn.Parent = Container
-OpenBtn.AnchorPoint = Vector2.new(0.5, 0.5)
-OpenBtn.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
-OpenBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OpenBtn.BorderSizePixel = 0
-OpenBtn.Position = UDim2.new(-1.58102441, 0, 1.07663798, 0)
-OpenBtn.Size = UDim2.new(0.570013702, 0, 0.0724089742, 0)
-
-Inactive_6.Name = "Inactive"
-Inactive_6.Parent = OpenBtn
-Inactive_6.AnchorPoint = Vector2.new(0.5, 0.5)
-Inactive_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Inactive_6.BackgroundTransparency = 1.000
-Inactive_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Inactive_6.BorderSizePixel = 0
-Inactive_6.Position = UDim2.new(0.5, 0, 0.5, 0)
-Inactive_6.Size = UDim2.new(1, 0, 1, 0)
-
-UICorner_33.CornerRadius = UDim.new(0.25, 0)
-UICorner_33.Parent = Inactive_6
-
-UIGradient_19.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 51)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(22, 143, 245))}
-UIGradient_19.Parent = Inactive_6
-
-Main_11.Name = "Main"
-Main_11.Parent = Inactive_6
-Main_11.AnchorPoint = Vector2.new(0.5, 0.5)
-Main_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_11.BackgroundTransparency = 1.000
-Main_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_11.BorderSizePixel = 0
-Main_11.Position = UDim2.new(0.5, 0, 0.5, 0)
-Main_11.Size = UDim2.new(0.985915482, 0, 0.934426308, 0)
-
-UICorner_34.CornerRadius = UDim.new(0.230000004, 0)
-UICorner_34.Parent = Main_11
-
-UIGradient_20.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(28, 29, 32)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 39, 53))}
-UIGradient_20.Parent = Main_11
-
-TextLabel_21.Parent = Main_11
-TextLabel_21.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_21.BackgroundTransparency = 1.000
-TextLabel_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_21.BorderSizePixel = 0
-TextLabel_21.Position = UDim2.new(0.390782386, 0, 0.505667925, 0)
-TextLabel_21.Size = UDim2.new(0.341498107, 0, 0.443678856, 0)
-TextLabel_21.Font = Enum.Font.SourceSansBold
-TextLabel_21.Text = "N Sploit | Open"
-TextLabel_21.TextColor3 = Color3.fromRGB(248, 246, 255)
-TextLabel_21.TextScaled = true
-TextLabel_21.TextSize = 14.000
-TextLabel_21.TextWrapped = true
-TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
-
-Icon_9.Name = "Icon"
-Icon_9.Parent = Main_11
-Icon_9.AnchorPoint = Vector2.new(0.5, 0.5)
-Icon_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon_9.BackgroundTransparency = 1.000
-Icon_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Icon_9.BorderSizePixel = 0
-Icon_9.Position = UDim2.new(0.0859330818, 0, 0.500000536, 0)
-Icon_9.Size = UDim2.new(0.0763392895, 0, 0.46875, 0)
-Icon_9.Image = "rbxassetid://17710738145"
-Icon_9.ImageColor3 = Color3.fromRGB(248, 246, 255)
-
-UIAspectRatioConstraint_9.Parent = Icon_9
-
-Keybind_9.Name = "Keybind"
-Keybind_9.Parent = Main_11
-Keybind_9.AnchorPoint = Vector2.new(0.5, 0.5)
-Keybind_9.BackgroundColor3 = Color3.fromRGB(100, 100, 104)
-Keybind_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Keybind_9.BorderSizePixel = 0
-Keybind_9.Position = UDim2.new(0.780233085, 0, 0.500000536, 0)
-Keybind_9.Size = UDim2.new(0.348107368, 0, 0.577850878, 0)
-
-UICorner_35.CornerRadius = UDim.new(0.349999994, 0)
-UICorner_35.Parent = Keybind_9
-
-TextLabel_22.Parent = Keybind_9
-TextLabel_22.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_22.BackgroundTransparency = 1.000
-TextLabel_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_22.BorderSizePixel = 0
-TextLabel_22.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_22.Size = UDim2.new(1.09459627, 0, 0.720962763, 0)
-TextLabel_22.Font = Enum.Font.SourceSansBold
-TextLabel_22.Text = "LeftControl"
-TextLabel_22.TextColor3 = Color3.fromRGB(246, 246, 255)
-TextLabel_22.TextScaled = true
-TextLabel_22.TextSize = 14.000
-TextLabel_22.TextWrapped = true
-
-Glow_6.Name = "Glow"
-Glow_6.Parent = OpenBtn
-Glow_6.AnchorPoint = Vector2.new(0.5, 0.5)
-Glow_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Glow_6.BackgroundTransparency = 1.000
-Glow_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Glow_6.BorderSizePixel = 0
-Glow_6.Position = UDim2.new(0.5, 0, 0.5, 0)
-Glow_6.Size = UDim2.new(1, 0, 1, 0)
-Glow_6.ZIndex = 0
-Glow_6.Image = "rbxassetid://17251150191"
-Glow_6.ImageColor3 = Color3.fromRGB(0, 123, 255)
-
-UICorner_36.CornerRadius = UDim.new(0.075000003, 0)
-UICorner_36.Parent = OpenBtn
-
-TextButton_8.Parent = OpenBtn
-TextButton_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_8.BackgroundTransparency = 1.000
-TextButton_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_8.BorderSizePixel = 0
-TextButton_8.Position = UDim2.new(0, 0, 5.55735141e-06, 0)
-TextButton_8.Size = UDim2.new(0, 181, 0, 32)
-TextButton_8.Font = Enum.Font.SourceSans
-TextButton_8.Text = ""
-TextButton_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_8.TextSize = 14.000
-
--- Scripts:
-
-local function SJCWZ_fake_script() -- Glow.LocalScript 
-	local scriptt = Instance.new('LocalScript', Glow)
-
-	scriptt.Parent.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userId=" .. game.Players.LocalPlayer.UserId
-end
-coroutine.wrap(SJCWZ_fake_script)()
-local function OPWUJJH_fake_script() -- TextLabel.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextLabel)
-
-	scriptt.Parent.Text = game.Players.LocalPlayer.DisplayName
-end
-coroutine.wrap(OPWUJJH_fake_script)()
-local function GNDLD_fake_script() -- TextLabel_2.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextLabel_2)
-
-	scriptt.Parent.Text = "@"..game.Players.LocalPlayer.Name
-end
-coroutine.wrap(GNDLD_fake_script)()
-local function SBTCH_fake_script() -- TextLabel_3.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextLabel_3)
-
-	scriptt.Parent.Text = "Main Game"
-end
-coroutine.wrap(SBTCH_fake_script)()
-local function SFTTU_fake_script() -- TextButton.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextButton)
-
-
-	local RunService = game:GetService("RunService")
-	local player = game.Players.LocalPlayer
-	local db = false
-
-	local function addHighlights()
-		local conntection
-		conntection = RunService.Heartbeat:Connect(function()
-			wait(3)
-			if db == true then
-				for _, model in pairs(workspace:GetDescendants()) do
-					task.spawn(function()
-						if db == true then
-							task.spawn(function()
-								if model:IsA("Model") and model:FindFirstChild("Humanoid") and model.Name ~= player.Name then
-									if db == true then
-										if not model:FindFirstChild("Highlight") then
-											local highlight = Instance.new("Highlight")
-											highlight.Parent = model
-											highlight.FillColor = Color3.fromRGB(255, 0, 0) 
-											highlight.FillTransparency = 0.5
-											highlight.OutlineTransparency = 0.5
-										end
-									else
-										conntection:Disconnect()
-									end
-								end
-							end)
-						else
-							conntection:Disconnect()
-						end
-					end)
-				end
-			else
-				conntection:Disconnect()
-			end
-		end)
+-- Instances: 50 | Scripts: 7 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.NyemCode
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[NyemCode]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.NyemCode.Main
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 31, 5);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2"]["Size"] = UDim2.new(0.53706, 0, 0.74971, 0);
+G2L["2"]["Position"] = UDim2.new(0.49993, 0, 0.48587, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Main]];
+
+
+-- StarterGui.NyemCode.Main.Main2
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(15, 44, 0);
+G2L["3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3"]["Size"] = UDim2.new(0.92992, 0, 0.84632, 0);
+G2L["3"]["Position"] = UDim2.new(0.49993, 0, 0.52051, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Name"] = [[Main2]];
+
+
+-- StarterGui.NyemCode.Main.Main2.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+G2L["4"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.Main2.UIStroke
+G2L["5"] = Instance.new("UIStroke", G2L["3"]);
+G2L["5"]["Thickness"] = 4.3;
+G2L["5"]["Color"] = Color3.fromRGB(16, 82, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.UIStroke.UIGradient
+G2L["6"] = Instance.new("UIGradient", G2L["5"]);
+G2L["6"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.303, 1),NumberSequenceKeypoint.new(0.699, 1),NumberSequenceKeypoint.new(1.000, 0)};
+
+
+-- StarterGui.NyemCode.Main.Main2.UIStroke.UIGradient.LocalScript
+G2L["7"] = Instance.new("LocalScript", G2L["6"]);
+
+
+
+-- StarterGui.NyemCode.Main.Main2.UIListLayout
+G2L["8"] = Instance.new("UIListLayout", G2L["3"]);
+G2L["8"]["Padding"] = UDim.new(0, 10);
+G2L["8"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP
+G2L["9"] = Instance.new("Frame", G2L["3"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(30, 89, 0);
+G2L["9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["9"]["Size"] = UDim2.new(0.99995, 0, 0.22311, 0);
+G2L["9"]["Position"] = UDim2.new(0.49998, 0, 0.11155, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Name"] = [[ESP]];
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["9"]);
+G2L["a"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextLabel
+G2L["b"] = Instance.new("TextLabel", G2L["9"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["b"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["RichText"] = true;
+G2L["b"]["Size"] = UDim2.new(0, 277, 0, 35);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[ESP]];
+G2L["b"]["Position"] = UDim2.new(0.12356, 0, 0.32256, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton
+G2L["c"] = Instance.new("TextButton", G2L["9"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextSize"] = 33;
+G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(185, 255, 166);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[Open]];
+G2L["c"]["Position"] = UDim2.new(0.68421, 0, 0.24192, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.UICorner
+G2L["d"] = Instance.new("UICorner", G2L["c"]);
+G2L["d"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["c"]);
+
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.ESP_Char
+G2L["f"] = Instance.new("Highlight", G2L["e"]);
+G2L["f"]["OutlineTransparency"] = 0.55;
+G2L["f"]["FillTransparency"] = 0.8;
+G2L["f"]["Name"] = [[ESP_Char]];
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.ESP_BOX
+G2L["10"] = Instance.new("BillboardGui", G2L["e"]);
+G2L["10"]["Active"] = true;
+G2L["10"]["AlwaysOnTop"] = true;
+G2L["10"]["Size"] = UDim2.new(6.5, 0, 8.5, 0);
+G2L["10"]["Enabled"] = false;
+G2L["10"]["ClipsDescendants"] = true;
+G2L["10"]["Name"] = [[ESP_BOX]];
+G2L["10"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.ESP_BOX.Holder
+G2L["11"] = Instance.new("Frame", G2L["10"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["Size"] = UDim2.new(1, 1, 1, 1);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Name"] = [[Holder]];
+G2L["11"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.ESP_BOX.Holder.Box
+G2L["12"] = Instance.new("Frame", G2L["11"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["Size"] = UDim2.new(0.79545, 1, 0.79901, 1);
+G2L["12"]["Position"] = UDim2.new(0.10135, 0, 0.09926, 0);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Name"] = [[Box]];
+G2L["12"]["BackgroundTransparency"] = 0.8;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.ESP_BOX.Holder.Box.UIStroke
+G2L["13"] = Instance.new("UIStroke", G2L["12"]);
+G2L["13"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["13"]["Thickness"] = 2;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.ESP_BOX.Holder.Username
+G2L["14"] = Instance.new("TextLabel", G2L["11"]);
+G2L["14"]["TextWrapped"] = true;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["TextScaled"] = true;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["BackgroundTransparency"] = 1;
+G2L["14"]["Size"] = UDim2.new(0.85688, 1, 0.09801, 1);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[Username]];
+G2L["14"]["Position"] = UDim2.new(0.07125, 0, 0, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.ESP_BOX.Holder.Username.UIStroke
+G2L["15"] = Instance.new("UIStroke", G2L["14"]);
+G2L["15"]["Thickness"] = 3;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP
+G2L["16"] = Instance.new("Frame", G2L["3"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(30, 89, 0);
+G2L["16"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["16"]["Size"] = UDim2.new(0.99995, 0, 0.22311, 0);
+G2L["16"]["Position"] = UDim2.new(0.49998, 0, 0.11155, 0);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Name"] = [[ESP]];
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.UICorner
+G2L["17"] = Instance.new("UICorner", G2L["16"]);
+G2L["17"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextLabel
+G2L["18"] = Instance.new("TextLabel", G2L["16"]);
+G2L["18"]["TextWrapped"] = true;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["18"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["TextScaled"] = true;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["RichText"] = true;
+G2L["18"]["Size"] = UDim2.new(0, 215, 0, 35);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[AimBot]];
+G2L["18"]["Position"] = UDim2.new(0.12356, 0, 0.32256, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton
+G2L["19"] = Instance.new("TextButton", G2L["16"]);
+G2L["19"]["TextWrapped"] = true;
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["TextSize"] = 33;
+G2L["19"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(185, 255, 166);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["19"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Text"] = [[-]];
+G2L["19"]["Position"] = UDim2.new(0.4092, 0, 0.24192, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.UICorner
+G2L["1a"] = Instance.new("UICorner", G2L["19"]);
+G2L["1a"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript
+G2L["1b"] = Instance.new("LocalScript", G2L["19"]);
+
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton
+G2L["1c"] = Instance.new("TextButton", G2L["16"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextSize"] = 33;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(185, 255, 166);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[Open]];
+G2L["1c"]["Position"] = UDim2.new(0.68421, 0, 0.24192, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
+G2L["1d"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["1c"]);
+
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.AimBotGui
+G2L["1f"] = Instance.new("ScreenGui", G2L["1e"]);
+G2L["1f"]["DisplayOrder"] = 999999999;
+G2L["1f"]["Enabled"] = false;
+G2L["1f"]["Name"] = [[AimBotGui]];
+G2L["1f"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.AimBotGui.AimCurle
+G2L["20"] = Instance.new("Frame", G2L["1f"]);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["20"]["Size"] = UDim2.new(0.13876, 0, 0.29902, 0);
+G2L["20"]["Position"] = UDim2.new(0.50569, 0, 0.48231, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Name"] = [[AimCurle]];
+G2L["20"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.AimBotGui.AimCurle.UIStroke
+G2L["21"] = Instance.new("UIStroke", G2L["20"]);
+G2L["21"]["Thickness"] = 1.7;
+G2L["21"]["Color"] = Color3.fromRGB(255, 0, 0);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript.AimBotGui.AimCurle.UICorner
+G2L["22"] = Instance.new("UICorner", G2L["20"]);
+G2L["22"]["CornerRadius"] = UDim.new(0, 100);
+
+
+-- StarterGui.NyemCode.Main.Main2.ESP.KeybindValue
+G2L["23"] = Instance.new("StringValue", G2L["16"]);
+G2L["23"]["Name"] = [[KeybindValue]];
+
+
+-- StarterGui.NyemCode.Main.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["2"]);
+G2L["24"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.UIStroke
+G2L["25"] = Instance.new("UIStroke", G2L["2"]);
+G2L["25"]["Thickness"] = 4.3;
+G2L["25"]["Color"] = Color3.fromRGB(15, 80, 0);
+
+
+-- StarterGui.NyemCode.Main.UIStroke.UIGradient
+G2L["26"] = Instance.new("UIGradient", G2L["25"]);
+G2L["26"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.303, 1),NumberSequenceKeypoint.new(0.699, 1),NumberSequenceKeypoint.new(1.000, 0)};
+
+
+-- StarterGui.NyemCode.Main.UIStroke.UIGradient.LocalScript
+G2L["27"] = Instance.new("LocalScript", G2L["26"]);
+
+
+
+-- StarterGui.NyemCode.Main.Title
+G2L["28"] = Instance.new("TextLabel", G2L["2"]);
+G2L["28"]["TextWrapped"] = true;
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["TextSize"] = 14;
+G2L["28"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["28"]["TextScaled"] = true;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["RichText"] = true;
+G2L["28"]["Size"] = UDim2.new(0, 200, 0, 31);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Text"] = [[Nyem Code]];
+G2L["28"]["Name"] = [[Title]];
+G2L["28"]["Position"] = UDim2.new(0.07289, 0, 0.01903, 0);
+
+
+-- StarterGui.NyemCode.Main.ImageLabel
+G2L["29"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["29"]["Image"] = [[rbxassetid://71865328530971]];
+G2L["29"]["Size"] = UDim2.new(0, 42, 0, 42);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Position"] = UDim2.new(0.00865, 0, 0.00952, 0);
+
+
+-- StarterGui.NyemCode.Main.ImageLabel.UICorner
+G2L["2a"] = Instance.new("UICorner", G2L["29"]);
+G2L["2a"]["CornerRadius"] = UDim.new(0, 100);
+
+
+-- StarterGui.NyemCode.Main.Close
+G2L["2b"] = Instance.new("TextButton", G2L["2"]);
+G2L["2b"]["TextWrapped"] = true;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["TextScaled"] = true;
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 9, 0);
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(5, 55, 0);
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["Size"] = UDim2.new(0, 50, 0, 50);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[X]];
+G2L["2b"]["Name"] = [[Close]];
+G2L["2b"]["Position"] = UDim2.new(0.96485, 0, -0.02855, 0);
+
+
+-- StarterGui.NyemCode.Main.Close.UICorner
+G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
+G2L["2c"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.Close.UIStroke
+G2L["2d"] = Instance.new("UIStroke", G2L["2b"]);
+
+
+
+-- StarterGui.NyemCode.Main.Close.UIStroke
+G2L["2e"] = Instance.new("UIStroke", G2L["2b"]);
+G2L["2e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["2e"]["Thickness"] = 2.2;
+G2L["2e"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+
+-- StarterGui.NyemCode.Main.Close.LocalScript
+G2L["2f"] = Instance.new("LocalScript", G2L["2b"]);
+
+
+
+-- StarterGui.NyemCode.Main.DragButton
+G2L["30"] = Instance.new("TextButton", G2L["2"]);
+G2L["30"]["TextWrapped"] = true;
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextSize"] = 33;
+G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(185, 255, 166);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Size"] = UDim2.new(0, 781, 0, 50);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[]];
+G2L["30"]["Name"] = [[DragButton]];
+G2L["30"]["Position"] = UDim2.new(-0, 0, -0.0017, 0);
+
+
+-- StarterGui.NyemCode.Main.DragButton.UICorner
+G2L["31"] = Instance.new("UICorner", G2L["30"]);
+G2L["31"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.NyemCode.Main.LocalScript
+G2L["32"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
+-- StarterGui.NyemCode.Main.Main2.UIStroke.UIGradient.LocalScript
+local function C_7()
+local script = G2L["7"];
+	while task.wait(0.1) do
+		script.Parent.Rotation += 2
 	end
-
-	local function removeAllHighlights()
-		for _, model in pairs(workspace:GetDescendants()) do
+end;
+task.spawn(C_7);
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript
+local function C_e()
+local script = G2L["e"];
+	local db = false
+	
+	local function EspOpenAll()
+		for i,plr in ipairs(game.Players:GetPlayers()) do
 			task.spawn(function()
-				if model:IsA("Model") and model:FindFirstChild("Humanoid") then
-					local highlight = model:FindFirstChildOfClass("Highlight")
-					if highlight then
-						highlight:Destroy()
-					end
-				end
+				task.wait(0.1)
+				if plr.Name == game.Players.LocalPlayer.Name then return end
+				if plr.Character:FindFirstChild("ESP_BOX") then return end
+				
+				local hig = script.ESP_Char:Clone()
+				hig.Parent = plr.Character
+				local gui = script.ESP_BOX:Clone()
+				gui.Holder.Username.Text = plr.DisplayName.." (@"..plr.Name..")"
+				gui.Parent = plr.Character
+				gui.Enabled = true
 			end)
 		end
 	end
-
-	local function toggleButtonStateOpen()
-		scriptt.Parent.Parent.Activee.Visible = true
-		scriptt.Parent.Parent.Inactive.Visible = false
+	
+	local function EspCloseAll()
+		for i,plr in ipairs(game.Players:GetPlayers()) do
+			task.spawn(function()
+				task.wait(0.1)
+				if plr.Name == game.Players.LocalPlayer.Name then return end
+				if not plr.Character:FindFirstChild("ESP_BOX") then return end
+				
+				local hig = plr.Character:FindFirstChild("ESP_Char")
+				hig:Destroy()
+				local gui = plr.Character:FindFirstChild("ESP_BOX")
+				gui:Destroy()
+			end)
+		end
 	end
-
-	local function toggleButtonStateClose()
-		scriptt.Parent.Parent.Activee.Visible = false
-		scriptt.Parent.Parent.Inactive.Visible = true
-	end
-
-	scriptt.Parent.MouseButton1Click:Connect(function()
-		if not db then
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if db == false then
 			db = true
-			toggleButtonStateOpen()
-			addHighlights()
-
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 155, 155)
+			script.Parent.Text = "Close"
+			EspOpenAll()
 		else
 			db = false
-			toggleButtonStateClose()
-			removeAllHighlights()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(184, 255, 165)
+			script.Parent.Text = "Open"
+			EspCloseAll()
 		end
 	end)
-end
-coroutine.wrap(SFTTU_fake_script)()
-local function ZXQTH_fake_script() -- TextButton_2.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextButton_2)
-
-	local player = game.Players.LocalPlayer
-	local mouse = player:GetMouse()
-
-	local target
-	local locked = false
-	local db = false
-
-	local function checkTarget()
-		local target = mouse.Target
-		if target and target.Parent then
-			local humanoid = target.Parent:FindFirstChild("Humanoid")
-			local head = target.Parent:FindFirstChild("Head")
-			if humanoid and head then
-				return head, humanoid
-			end
-		end
-		return nil, nil
-	end
-
-	local function updateAimLock()
-		if locked and target then
-			local character = player.Character or player.CharacterAdded:Wait()
-			local headPosition = target.Position
-			local camera = workspace.CurrentCamera
-			camera.CFrame = CFrame.new(camera.CFrame.Position, headPosition)
-		end
-	end
-
-	mouse.Move:Connect(function()
-		if db then
-			local head, humanoid = checkTarget()
-			if head and humanoid and humanoid.Health > 0 then
-				target = head
-				locked = true
-			else
-				target = nil
-				locked = false
-			end
-		end
-	end)
-
-	game:GetService("RunService").RenderStepped:Connect(function()
-		if locked and db then
-			local humanoid = target.Parent:FindFirstChild("Humanoid")
-			if humanoid and humanoid.Health > 0 then
-				updateAimLock()
-			else
-				target = nil
-				locked = false
-			end
-		end
-	end)
-
-	local function toggleButtonStateOpen()
-		scriptt.Parent.Parent.Activee.Visible = true
-		scriptt.Parent.Parent.Inactive.Visible = false
-	end
-
-	local function toggleButtonStateClose()
-		scriptt.Parent.Parent.Activee.Visible = false
-		scriptt.Parent.Parent.Inactive.Visible = true
-	end
-
-	scriptt.Parent.MouseButton1Click:Connect(function()
-		if not db then
-			db = true
-			toggleButtonStateOpen()
-
-		else
-			db = false
-			toggleButtonStateClose()
-			target = nil
-			locked = false
-		end
-	end)
-	local userInputService = game:GetService("UserInputService")
-	userInputService.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.LeftAlt then
-			if not db then
-				db = true
-				toggleButtonStateOpen()
-
-			else
-				db = false
-				toggleButtonStateClose()
-				target = nil
-				locked = false
-			end
-		end
-	end)
-
-end
-coroutine.wrap(ZXQTH_fake_script)()
-local function ADVO_fake_script() -- TextButton_3.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextButton_3)
-
-	scriptt.Parent.MouseButton1Click:Connect(function()
-		scriptt.Parent.Parent.Parent.Parent.Parent.Parent.SettingsFrame.Visible = true
-	end)
-end
-coroutine.wrap(ADVO_fake_script)()
-local function PNYHUH_fake_script() -- Keybind_8.LocalScript 
-	local scriptt = Instance.new('LocalScript', Keybind_8)
-
-	local TextButton = scriptt.Parent.TextButton
-	local TextLabel = scriptt.Parent.TextLabel
-	local closebtn = scriptt.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Main.CloseBtn.Inactive.Main.Keybind.TextLabel
-	local openbtn = scriptt.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Container.OpenBtn.Inactive.Main.Keybind.TextLabel
-	local inputConnection 
-
-	TextButton.MouseButton1Click:Connect(function()
-		local keyPressed = "" 
-		TextLabel.Text = keyPressed
-		inputConnection = game:GetService("UserInputService").InputBegan:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.Keyboard then
-				keyPressed = input.KeyCode.Name
-
-				TextLabel.Text = keyPressed
-				closebtn.Text = keyPressed
-				openbtn.Text = keyPressed
-
-				inputConnection:Disconnect()
+	
+	game.Players.PlayerAdded:Connect(function(plr)
+		plr.CharacterAdded:Connect(function(char)
+			if plr.Name == game.Players.LocalPlayer.Name then
+				if db == false then
+					script.Parent.BackgroundColor3 = Color3.fromRGB(255, 155, 155)
+					script.Parent.Text = "Close"
+					EspOpenAll()
+				else
+					script.Parent.BackgroundColor3 = Color3.fromRGB(184, 255, 165)
+					script.Parent.Text = "Open"
+					EspCloseAll()
+				end
 			end
 		end)
 	end)
-
-end
-coroutine.wrap(PNYHUH_fake_script)()
-local function SFODVLH_fake_script() -- TextButton_6.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextButton_6)
-
-	scriptt.Parent.MouseButton1Click:Connect(function()
-		scriptt.Parent.Parent.Parent.SettingsFrame.Visible = false
+end;
+task.spawn(C_e);
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript
+local function C_1b()
+local script = G2L["1b"];
+	local button = script.Parent
+	local keybindValue = script.Parent.Parent:WaitForChild("KeybindValue")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local listening = false
+	local currentKeys = {}
+		
+	local function keysToString(keys)
+		local keyNames = {}
+		for keyCode, _ in pairs(keys) do
+			table.insert(keyNames, keyCode.Name)
+		end
+		table.sort(keyNames)
+		return table.concat(keyNames, " + ")
+	end
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		if listening and input.UserInputType == Enum.UserInputType.Keyboard then
+			currentKeys[input.KeyCode] = true
+			local combo = keysToString(currentKeys)
+			button.Text = combo
+			keybindValue.Value = combo
+		end
 	end)
-end
-coroutine.wrap(SFODVLH_fake_script)()
-local function IAFBZPZ_fake_script() -- TextButton_7.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextButton_7)
-
-	scriptt.Parent.MouseButton1Click:Connect(function()
-		scriptt.Parent.Parent.Parent.Warn.Visible = false
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if listening and input.UserInputType == Enum.UserInputType.Keyboard then
+			currentKeys[input.KeyCode] = nil
+		end
 	end)
-end
-coroutine.wrap(IAFBZPZ_fake_script)()
-local function MXBU_fake_script() -- TextButton_8.LocalScript 
-	local scriptt = Instance.new('LocalScript', TextButton_8)
-
-	scriptt.Parent.MouseButton1Click:Connect(function()
-		scriptt.Parent.Parent.Parent.MainContainer.Visible = true
-		scriptt.Parent.Parent.Parent.OpenBtn.Visible = false
-	end)
-end
-coroutine.wrap(MXBU_fake_script)()
-local function YVPQ_fake_script() -- Sidebar.LocalScript 
-	local scriptt = Instance.new('LocalScript', Sidebar)
-
-	local TextLabel = scriptt.Parent.Canvas.Container.OpenBtn.Inactive.Main.Keybind.TextLabel
-	local targetFrame = scriptt.Parent.Canvas.Container.MainContainer
-	local btn = scriptt.Parent.Canvas.Container.OpenBtn
-	local closebtn = scriptt.Parent.Canvas.Container.MainContainer.Main.CloseBtn.Inactive.Main.TextButton
-	local inputConnection 
-	local lastKeyPressTime = tick() 
-	local spamThreshold = 0.00
-	local spamWarningShown = false 
-
-	inputConnection = game:GetService("UserInputService").InputBegan:Connect(function(input)
-		local TextLabelTextOld = scriptt.Parent.Canvas.Container.OpenBtn.Inactive.Main.Keybind.TextLabel.Text
-		if input.UserInputType == Enum.UserInputType.Keyboard then
-			local currentTime = tick()
-			local timeSinceLastKeyPress = currentTime - lastKeyPressTime
-			lastKeyPressTime = currentTime
-
-			if timeSinceLastKeyPress < spamThreshold then
-				if not spamWarningShown then
-					spamWarningShown = true
-					scriptt.Parent.Canvas.Container.MainContainer.Warn.Visible = true
-					TextLabel.Text = ""
-					targetFrame.Visible = true
-					btn.Visible = false
-					wait(3)
-					btn.Inactive.Main.Keybind.TextLabel.Text = TextLabelTextOld
-					TextLabel.Text = TextLabelTextOld
-				end
-			else
-				spamWarningShown = false 
+	
+	button.MouseButton1Click:Connect(function()
+		currentKeys = {}
+		button.Text = "Press Key..."
+		keybindValue.Value = ""
+		listening = true
+	
+		task.delay(2, function()
+			listening = false
+			if keybindValue.Value == "" then
+				button.Text = "-"
 			end
-
-			if targetFrame.Visible == false then
-				local pressedKey = input.KeyCode.Name
-				if pressedKey == TextLabel.Text then
-					targetFrame.Visible = true
-					btn.Visible = false
-				end
+		end)
+	end)
+	
+end;
+task.spawn(C_1b);
+-- StarterGui.NyemCode.Main.Main2.ESP.TextButton.LocalScript
+local function C_1e()
+local script = G2L["1e"];
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local player = Players.LocalPlayer
+	local camera = Workspace.CurrentCamera
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local aimBotGui = script:WaitForChild("AimBotGui")
+	local aimCircle = aimBotGui:WaitForChild("AimCurle")
+	
+	local keybindValue = script.Parent.Parent:WaitForChild("KeybindValue")
+	
+	local db = false
+	local mouseDown = false
+	
+	-- AimCircle’yi ekranın tam ortasına sabitleyen fonksiyon
+	local function setAimCircleToCenter()
+		--
+	end
+	
+	-- Pozisyon dışarıdan değişirse tekrar ortala
+	aimCircle:GetPropertyChangedSignal("Position"):Connect(function()
+		local size = aimCircle.AbsoluteSize
+		local centerPos = UDim2.new(0.5, -size.X / 2, 0.5, -size.Y / 2)
+		if aimCircle.Position ~= centerPos then
+			aimCircle.Position = centerPos
+		end
+	end)
+	
+	-- Boyut değişirse tekrar ortala
+	aimCircle:GetPropertyChangedSignal("Size"):Connect(setAimCircleToCenter)
+	
+	-- Ekran boyutu değişirse tekrar ortala
+	Workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(setAimCircleToCenter)
+	
+	-- Başlangıçta pozisyonu ayarla
+	setAimCircleToCenter()
+	
+	-- Toggle tuşlarına basınca aç/kapa
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		local combo = keybindValue.Value
+		if combo == "" then return end
+	
+		-- Tuş kombinasyonunu parçala
+		local expected = {}
+		for name in string.gmatch(combo, "[^%s%+]+") do
+			expected[name] = true
+		end
+	
+		local allMatch = true
+		for name, _ in pairs(expected) do
+			local keyCode = Enum.KeyCode[name]
+			if not UserInputService:IsKeyDown(keyCode) then
+				allMatch = false
+				break
+			end
+		end
+	
+		if allMatch then
+			db = not db
+			print("Toggle durum:", db)
+			if db then
+				aimBotGui.Parent = playerGui
+				aimBotGui.Enabled = true
+				setAimCircleToCenter()
 			else
-				local pressedKey = input.KeyCode.Name
-				if pressedKey == TextLabel.Text then
-					targetFrame.Visible = false
-					btn.Visible = true
+				aimBotGui.Parent = nil
+			end
+		end
+	
+		-- Sol fare tık basıldı mı kontrolü
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			mouseDown = true
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input, gameProcessed)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			mouseDown = false
+		end
+	end)
+	
+	local function isPointInCircle(point, circlePos, circleRadius)
+		local dx = point.X - circlePos.X
+		local dy = point.Y - circlePos.Y
+		return (dx*dx + dy*dy) <= (circleRadius * circleRadius)
+	end
+	
+	RunService.RenderStepped:Connect(function()
+		if not db or not mouseDown then return end
+	
+		local aimPos = aimCircle.AbsolutePosition + (aimCircle.AbsoluteSize / 2)
+		local aimRadius = aimCircle.AbsoluteSize.X / 2
+	
+		local closestTarget = nil
+		local closestDist = math.huge
+	
+		-- Workspace içindeki modelleri tarıyoruz, içinde Humanoid varsa ve Head varsa hedefle
+		for _, model in pairs(Workspace:GetChildren()) do
+			if model:IsA("Model") and model:FindFirstChildOfClass("Humanoid") and model:FindFirstChild("Head") then
+				if model ~= player.Character then
+					local head = model.Head
+					local headPos, onScreen = camera:WorldToScreenPoint(head.Position)
+					if onScreen then
+						local screenPos = Vector2.new(headPos.X, headPos.Y)
+						if isPointInCircle(screenPos, aimPos, aimRadius) then
+							local dist = (screenPos - aimPos).Magnitude
+							if dist < closestDist then
+								closestDist = dist
+								closestTarget = model
+							end
+						end
+					end
 				end
 			end
 		end
+	
+		if closestTarget then
+			local head = closestTarget.Head
+			local direction = (head.Position - camera.CFrame.Position).Unit
+			local newCFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + direction)
+			camera.CFrame = newCFrame
+		end
 	end)
-
-	closebtn.MouseButton1Click:Connect(function()
-		targetFrame.Visible = false
-		btn.Visible = true
+	
+	-- Script.Parent (örneğin bir TextButton) tıklanınca da toggle çalışsın istersen bunu kullanabilirsin:
+	if script.Parent:IsA("GuiButton") then
+		script.Parent.MouseButton1Click:Connect(function()
+			db = not db
+			print("Toggle durum:", db)
+			if db then
+				aimBotGui.Parent = playerGui
+				aimBotGui.Enabled = true
+				setAimCircleToCenter()
+			else
+				aimBotGui.Parent = nil
+			end
+		end)
+	end
+	
+end;
+task.spawn(C_1e);
+-- StarterGui.NyemCode.Main.UIStroke.UIGradient.LocalScript
+local function C_27()
+local script = G2L["27"];
+	while task.wait(0.1) do
+		script.Parent.Rotation += 2
+	end
+end;
+task.spawn(C_27);
+-- StarterGui.NyemCode.Main.Close.LocalScript
+local function C_2f()
+local script = G2L["2f"];
+	local button = script.Parent
+	local db = false
+	
+	button.MouseButton1Click:Connect(function()
+		if db == false then
+			db = true
+			script.Parent.Parent.Parent.Main.Size = UDim2.new(0.151, 0,0.067, 0)
+			script.Parent.Parent.DragButton.Size = UDim2.new(0, 219,0, 50)
+			script.Parent.Parent.Main2.Visible = false
+			script.Parent.Parent.Title.Visible = false
+			script.Parent.Text = "+"
+		else
+			db = false
+			script.Parent.Parent.Parent.Main.Size = UDim2.new(0.537, 0,0.75, 0)
+			script.Parent.Parent.DragButton.Size = UDim2.new(0, 781,0, 50)
+			script.Parent.Parent.Main2.Visible = true
+			script.Parent.Parent.Title.Visible = true
+			script.Parent.Text = "X"
+		end
 	end)
+	
+end;
+task.spawn(C_2f);
+-- StarterGui.NyemCode.Main.LocalScript
+local function C_32()
+local script = G2L["32"];
+	local button = script.Parent:WaitForChild("DragButton")
+	local frame = script.Parent
+	
+	local dragging = false
+	local dragStart
+	local startPos
+	
+	local userInputService = game:GetService("UserInputService")
+	
+	-- Sürükleme başlat
+	button.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	-- Sürükleme devam ettikçe
+	userInputService.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local delta = input.Position - dragStart
+			frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+	end)
+	
+end;
+task.spawn(C_32);
 
-end
-coroutine.wrap(YVPQ_fake_script)()
+return G2L["1"], require;
